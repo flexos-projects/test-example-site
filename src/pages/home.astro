@@ -1,0 +1,179 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+
+const pageTitle = "Home | Unveil the Unseen | Intriguing Solutions";
+const pageDescription = "Discover an intriguing world of sophisticated concepts and unconventional solutions. Explore thought-provoking services and next-gen insights with a modern, minimalist approach.";
+const keywords = "intriguing solutions, modern minimalist design, sophisticated concepts, enigmatic experiences, thought-provoking services, unconventional ideas, elusive intelligence, next-gen insights, strategic foresight, unseen possibilities";
+
+// Helper for consistent spacing and container width
+const sectionPadding = "py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8";
+const containerWidth = "max-w-7xl mx-auto";
+---
+
+<Layout title={pageTitle} description={pageDescription} keywords={keywords}>
+  <main class="font-['Inter'] text-[#333333] bg-[#ffffff] min-h-screen">
+
+    <!-- hero-intro -->
+    <section
+      class="relative h-[60vh] md:h-[70vh] lg:h-[80vh] flex items-center justify-center text-center overflow-hidden"
+      aria-labelledby="hero-headline"
+    >
+      <img
+        src="/assets/hero-background-abstract-gradient.jpg"
+        alt="Abstract gradient background, hinting at unseen possibilities and depth"
+        class="absolute inset-0 w-full h-full object-cover object-center z-0"
+        loading="eager"
+      />
+      <!-- Overlay for subtle depth and contrast -->
+      <div class="absolute inset-0 bg-[#1A1A1A] opacity-70 z-10"></div>
+
+      <div class="relative z-20 {containerWidth} text-[#ffffff] px-4">
+        <h1 id="hero-headline" class="font-['IBM_Plex_Sans'] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-4 tracking-tight">
+          Unveiling the Unseen.
+        </h1>
+        <p class="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto mb-8 opacity-90">
+          Some truths are better discovered than told. Begin your exploration here.
+        </p>
+        <Button href="/explore" variant="outline" class="border-2 border-[#ffffff] text-[#ffffff] hover:bg-[#ffffff] hover:text-[#1A1A1A] hover:border-[#ffffff]">
+          Explore the Enigma
+        </Button>
+      </div>
+    </section>
+
+    <!-- enigmatic-reveal -->
+    <section class="{sectionPadding} bg-[#ffffff]" aria-labelledby="enigmatic-reveal-headline">
+      <div class="{containerWidth} grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="md:order-2 flex justify-center p-4">
+          <img
+            src="/assets/icon-question-mark-minimal.svg"
+            alt="Minimalist question mark icon, representing profound inquiry and hidden knowledge"
+            class="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 opacity-80"
+            loading="lazy"
+            aria-hidden="true"
+          />
+        </div>
+        <div class="md:order-1 text-center md:text-left">
+          <h2 id="enigmatic-reveal-headline" class="font-['IBM_Plex_Sans'] text-3xl sm:text-4xl font-bold mb-6 text-[#1A1A1A]">
+            A Profound Perspective
+          </h2>
+          <p class="text-lg leading-relaxed mb-8 max-w-xl mx-auto md:mx-0 text-[#333333]">
+            In a world of noise, we offer clarity through an unconventional lens. We don't just solve problems; we redefine the questions. Our methods are precise, our insights profound, and our results, transformative. What lies beneath the surface?
+          </p>
+          <Button href="/uncover" variant="outline" class="border-[#81A4BB] text-[#81A4BB] hover:bg-[#81A4BB] hover:text-[#ffffff]">
+            Uncover More
+          </Button>
+        </div>
+      </div>
+    </section>
+
+    <!-- core-essence-highlights -->
+    <section class="{sectionPadding} bg-[#F8F8F8]" aria-labelledby="pillars-headline">
+      <div class="{containerWidth} text-center">
+        <h2 id="pillars-headline" class="font-['IBM_Plex_Sans'] text-3xl sm:text-4xl font-bold mb-4 text-[#1A1A1A]">
+          The Pillars of Our Philosophy
+        </h2>
+        <p class="text-lg mb-12 max-w-2xl mx-auto text-[#333333]">
+          Explore the foundations of our unique approach.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Pillar 1: Precise Methodology -->
+          <div class="bg-[#ffffff] p-8 rounded-sm shadow-md flex flex-col items-center text-center transition-all duration-300 ease-in-out hover:shadow-lg">
+            <img
+              src="/assets/icon-precision-lineart.svg"
+              alt="Line art icon representing precision"
+              class="w-16 h-16 mb-6 opacity-80"
+              aria-hidden="true"
+              loading="lazy"
+            />
+            <h3 class="font-['IBM_Plex_Sans'] text-xl font-semibold mb-3 text-[#1A1A1A]">Precise Methodology</h3>
+            <p class="text-[#888888]">Crafting solutions with exacting depth.</p>
+          </div>
+          <!-- Pillar 2: Profound Insight -->
+          <div class="bg-[#ffffff] p-8 rounded-sm shadow-md flex flex-col items-center text-center transition-all duration-300 ease-in-out hover:shadow-lg">
+            <img
+              src="/assets/icon-insight-abstract.svg"
+              alt="Abstract icon representing profound insight"
+              class="w-16 h-16 mb-6 opacity-80"
+              aria-hidden="true"
+              loading="lazy"
+            />
+            <h3 class="font-['IBM_Plex_Sans'] text-xl font-semibold mb-3 text-[#1A1A1A]">Profound Insight</h3>
+            <p class="text-[#888888]">Illuminating paths unseen by others.</p>
+          </div>
+          <!-- Pillar 3: Unconventional Innovation -->
+          <div class="bg-[#ffffff] p-8 rounded-sm shadow-md flex flex-col items-center text-center transition-all duration-300 ease-in-out hover:shadow-lg">
+            <img
+              src="/assets/icon-innovation-geometric.svg"
+              alt="Geometric icon representing innovative thinking"
+              class="w-16 h-16 mb-6 opacity-80"
+              aria-hidden="true"
+              loading="lazy"
+            />
+            <h3 class="font-['IBM_Plex_Sans'] text-xl font-semibold mb-3 text-[#1A1A1A]">Unconventional Innovation</h3>
+            <p class="text-[#888888]">Redefining possibilities beyond the ordinary.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- thought-provocation-cta -->
+    <section
+      class="relative {sectionPadding} bg-[#1A1A1A] text-[#ffffff] text-center overflow-hidden"
+      aria-labelledby="thought-cta-headline"
+    >
+      <img
+        src="/assets/cta-background-dark-texture.jpg"
+        alt="Dark textured background, evoking depth and mystery"
+        class="absolute inset-0 w-full h-full object-cover object-center opacity-20 z-0"
+        loading="lazy"
+      />
+      <div class="relative z-10 {containerWidth}">
+        <h2 id="thought-cta-headline" class="font-['IBM_Plex_Sans'] text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight">
+          What if the obvious is merely a distraction?
+        </h2>
+        <p class="text-lg sm:text-xl max-w-3xl mx-auto mb-10 opacity-90">
+          Challenge your perceptions. Discover a new perspective with us. Your journey begins with a single step into the unknown.
+        </p>
+        <Button href="/challenge" variant="outline" class="border-2 border-[#A2D9D0] text-[#A2D9D0] hover:bg-[#A2D9D0] hover:text-[#1A1A1A] hover:border-[#A2D9D0]">
+          Challenge Perceptions
+        </Button>
+      </div>
+    </section>
+
+    <!-- client-perspective -->
+    <section class="{sectionPadding} bg-[#ffffff]" aria-labelledby="client-quote-headline">
+      <div class="{containerWidth} text-center max-w-3xl mx-auto">
+        <h2 id="client-quote-headline" class="sr-only">Client Perspective</h2>
+        <img
+          src="/assets/client-quote-icon.svg"
+          alt="Quote icon, indicating a testimonial"
+          class="w-12 h-12 mx-auto mb-6 opacity-70"
+          aria-hidden="true"
+          loading="lazy"
+        />
+        <blockquote class="text-2xl sm:text-3xl md:text-4xl font-['IBM_Plex_Sans'] font-medium leading-relaxed italic text-[#1A1A1A] mb-8">
+          “They don't just see the future; they sculpt it. An unparalleled partner in navigating complexity.”
+        </blockquote>
+        <p class="text-lg font-semibold text-[#888888]">— A Visionary Leader</p>
+      </div>
+    </section>
+
+    <!-- final-invitation -->
+    <section class="{sectionPadding} bg-[#A4C4D9] text-center" aria-labelledby="final-cta-headline">
+      <div class="{containerWidth} max-w-3xl mx-auto">
+        <h2 id="final-cta-headline" class="font-['IBM_Plex_Sans'] text-3xl sm:text-4xl font-bold mb-4 text-[#1A1A1A]">
+          Ready to explore the possibilities?
+        </h2>
+        <p class="text-lg leading-relaxed mb-10 text-[#333333]">
+          Connect with us to unravel the next great challenge. We thrive in the uncharted territory. Your inquiry is the first step into a new realm of thought.
+        </p>
+        <Button href="/contact" variant="outline" class="border-2 border-[#1A1A1A] text-[#1A1A1A] hover:bg-[#1A1A1A] hover:text-[#A4C4D9] hover:border-[#1A1A1A]">
+          Begin Your Inquiry
+        </Button>
+      </div>
+    </section>
+
+  </main>
+</Layout>

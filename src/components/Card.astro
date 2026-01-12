@@ -1,0 +1,36 @@
+---
+interface Props {
+  title: string;
+  image: string;
+  class?: string;
+}
+
+const { title, image, class: className, ...attrs } = Astro.props;
+---
+
+<article
+  class:list={[
+    "bg-[#ffffff] rounded-sm shadow-md overflow-hidden flex flex-col",
+    "transition-all duration-300 ease-in-out hover:shadow-lg",
+    className
+  ]}
+  {...attrs}
+>
+  <img
+    src={image}
+    alt={title}
+    class="w-full h-48 sm:h-56 md:h-64 object-cover"
+    loading="lazy"
+  />
+  <div class="p-4 sm:p-6 flex flex-col flex-grow">
+    <h3 class="font-['IBM_Plex_Sans'] text-xl sm:text-2xl font-semibold text-[#000000] mb-2 leading-tight">
+      {title}
+    </h3>
+    <p class="font-['Inter'] text-[#333333] text-base mb-4 flex-grow">
+      <slot name="description" />
+    </p>
+    <div class="mt-auto">
+      <slot />
+    </div>
+  </div>
+</article>

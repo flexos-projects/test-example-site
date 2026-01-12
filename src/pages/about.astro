@@ -1,0 +1,24 @@
+---
+// Import necessary components
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Button from '../components/Button.astro';
+
+// Define the CTASection component here as per the provided snippet,
+// allowing for class overrides for flexibility.
+interface CTASectionProps {
+  headline: string;
+  description: string;
+  buttonText: string;
+  buttonLink: string;
+  class?: string; // Allows overriding the section's background and text color
+}
+
+const CTASection = ({ headline, description, buttonText, buttonLink, class: className }: CTASectionProps) => (
+  <section class:list={["py-16 sm:py-20 md:py-24 font-['Inter']", className]} aria-label="Call to action section">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-[#ffffff] shadow-lg rounded-sm p-8 sm:p-10 md:p-12 text-center">
+        <h2 class="font-['IBM_Plex_Sans'] text-3xl sm:text-4xl md:text-5xl font-bold text-[#000000] mb-6">
+          {headline}
+        </h2>
+        <p class="font-['Inter'] text-lg sm:text-xl text-[#33
